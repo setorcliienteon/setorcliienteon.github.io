@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Necxt | Orbitall Atendimento Ltda — Soluções em Atendimento ao Cliente</title>
+<meta name="description" content="Necxt by Orbitall Atendimento Ltda — soluções completas em atendimento ao cliente, SAC, suporte técnico e relacionamento com o consumidor.">
+<style>
+  :root{
+    --roxo-escuro:#1a1033;
+    --roxo:#3b2a6e;
+    --roxo-claro:#5b45a8;
+    --laranja:#ff7a1a;
+    --cinza:#f6f5fa;
+    --texto:#2b2b2b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,Helvetica,sans-serif;}
+  html{scroll-behavior:smooth;}
+  body{color:var(--texto);background:#fff;line-height:1.6;}
+
+  /* ===== HEADER / NAV ===== */
+  header{position:fixed;top:0;width:100%;background:rgba(26,16,51,.97);z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.3);}
+  .nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:14px 20px;}
+  .logo{color:#fff;font-size:1.6rem;font-weight:800;letter-spacing:1px;}
+  .logo span{color:var(--laranja);}
+  .logo small{display:block;font-size:.6rem;font-weight:400;color:#b7add6;letter-spacing:2px;text-transform:uppercase;}
+  nav ul{display:flex;gap:22px;list-style:none;}
+  nav a{color:#ddd6f0;text-decoration:none;font-size:.95rem;transition:.2s;}
+  nav a:hover{color:var(--laranja);}
+  .menu-toggle{display:none;color:#fff;font-size:1.6rem;cursor:pointer;background:none;border:none;}
+  @media(max-width:860px){
+    nav ul{display:none;position:absolute;top:100%;left:0;width:100%;flex-direction:column;background:var(--roxo-escuro);padding:16px 20px;gap:14px;}
+    nav ul.open{display:flex;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{padding:160px 20px 90px;text-align:center;color:#fff;
+    background:linear-gradient(135deg,var(--roxo-escuro) 0%,var(--roxo) 55%,var(--roxo-claro) 100%);}
+  .hero h1{font-size:2.6rem;margin-bottom:16px;}
+  .hero h1 span{color:var(--laranja);}
+  .hero p{max-width:640px;margin:0 auto 30px;font-size:1.15rem;color:#d9d2ec;}
+  .btn{display:inline-block;background:var(--laranja);color:#fff;font-weight:700;padding:14px 36px;border-radius:30px;text-decoration:none;transition:.25s;font-size:1rem;}
+  .btn:hover{background:#ff8f3d;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.3);}
+
+  /* ===== SEÇÕES ===== */
+  section{padding:70px 20px;}
+  .container{max-width:1100px;margin:0 auto;}
+  h2.titulo{text-align:center;font-size:2rem;color:var(--roxo-escuro);margin-bottom:12px;}
+  .subtitulo{text-align:center;color:#666;max-width:680px;margin:0 auto 45px;}
+  .divider{width:70px;height:4px;background:var(--laranja);margin:0 auto 20px;border-radius:2px;}
+
+  /* SOBRE */
+  #sobre{background:var(--cinza);}
+  .sobre-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;}
+  @media(max-width:860px){.sobre-grid{grid-template-columns:1fr;}}
+  .sobre-grid p{margin-bottom:14px;}
+  .card-info{background:#fff;border-radius:12px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+  .card-info h3{color:var(--roxo);margin-bottom:14px;}
+  .card-info ul{list-style:none;}
+  .card-info li{padding:8px 0;border-bottom:1px solid #eee;font-size:.95rem;}
+  .card-info li:last-child{border:none;}
+  .card-info strong{color:var(--roxo-escuro);}
+
+  /* SERVIÇOS */
+  .grid-servicos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;}
+  .card{background:#fff;border:1px solid #e9e5f4;border-radius:12px;padding:30px 24px;transition:.25s;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(59,42,110,.16);border-color:var(--roxo-claro);}
+  .card .icone{font-size:2.2rem;margin-bottom:12px;}
+  .card h3{color:var(--roxo-escuro);margin-bottom:10px;font-size:1.1rem;}
+  .card p{font-size:.93rem;color:#555;}
+
+  /* LEGAL */
+  #privacidade,#termos{background:var(--cinza);}
+  .legal{background:#fff;border-radius:12px;padding:36px;box-shadow:0 4px 16px rgba(0,0,0,.06);}
+  .legal h3{color:var(--roxo);margin:26px 0 10px;font-size:1.1rem;}
+  .legal h3:first-child{margin-top:0;}
+  .legal p,.legal li{font-size:.95rem;color:#444;margin-bottom:8px;}
+  .legal ul{padding-left:22px;margin-bottom:10px;}
+  .legal strong{color:var(--roxo-escuro);}
+
+  /* CONTATO */
+  .contato-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .contato-item{background:var(--roxo-escuro);color:#fff;border-radius:12px;padding:28px;text-align:center;}
+  .contato-item h3{color:var(--laranja);margin-bottom:10px;}
+  .contato-item p{font-size:.92rem;color:#d9d2ec;}
+
+  /* FOOTER */
+  footer{background:#120b24;color:#b9b0d6;padding:50px 20px 24px;}
+  .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;}
+  footer h4{color:#fff;margin-bottom:14px;font-size:1rem;}
+  footer p,footer li{font-size:.88rem;line-height:1.7;}
+  footer ul{list-style:none;}
+  footer a{color:#b9b0d6;text-decoration:none;}
+  footer a:hover{color:var(--laranja);}
+  .copyright{max-width:1100px;margin:34px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);text-align:center;font-size:.8rem;color:#8a7fb0;}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="nav">
+    <div class="logo">Necxt<small>by Orbitall Atendimento</small></div>
+    <button class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#privacidade">Privacidade</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero" id="inicio">
+  <h1>Atendimento ao cliente <span>que conecta você ao futuro</span></h1>
+  <p>A Necxt, marca da Orbitall Atendimento Ltda, oferece soluções completas em relacionamento com o cliente: SAC, suporte técnico, backoffice e atendimento multicanal com tecnologia e humanização.</p>
+  <a href="#servicos" class="btn">Conheça nossos serviços</a>
+</div>
+
+<!-- ===== SOBRE ===== -->
+<section id="sobre">
+  <div class="container">
+    <h2 class="titulo">Sobre a Empresa</h2>
+    <div class="divider"></div>
+    <div class="sobre-grid">
+      <div>
+        <p>A <strong>Orbitall Atendimento Ltda</strong>, que atua no mercado sob o nome fantasia <strong>Necxt</strong>, é uma empresa especializada em soluções de atendimento ao cliente e relacionamento com o consumidor.</p>
+        <p>Com sede em Campina Grande – PB, nossa missão é conectar empresas e clientes por meio de experiências de atendimento ágeis, humanizadas e eficientes, utilizando tecnologia de ponta aliada a equipes altamente treinadas.</p>
+        <p>Nossos valores são a excelência no atendimento, a inovação constante, a ética, o respeito ao cliente e o compromisso com resultados. Acreditamos que cada interação é uma oportunidade de construir relacionamentos duradouros entre marcas e consumidores.</p>
+      </div>
+      <div class="card-info">
+        <h3>Dados da Empresa</h3>
+        <ul>
+          <li><strong>Razão Social:</strong><br>Orbitall Atendimento Ltda</li>
+          <li><strong>Nome Fantasia:</strong><br>Necxt</li>
+          <li><strong>CNPJ (Matriz):</strong><br>18.081.219/0001-28</li>
+          <li><strong>Endereço:</strong><br>Rua Elpidio de Almeida, 1111<br>Bairro Catolé – Campina Grande/PB<br>CEP 58410-215</li>
+          <li><strong>Atuação:</strong><br>Atendimento ao cliente e BPO</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVIÇOS ===== -->
+<section id="servicos">
+  <div class="container">
+    <h2 class="titulo">Nossos Serviços</h2>
+    <p class="subtitulo">Soluções completas em atendimento e relacionamento, personalizadas para o tamanho e a necessidade do seu negócio.</p>
+    <div class="grid-servicos">
+      <div class="card">
+        <div class="icone">📞</div>
+        <h3>Central de Atendimento (Call Center)</h3>
+        <p>Operações de inbound e outbound com equipes treinadas para oferecer atendimento ágil, cordial e eficiente ao seu cliente.</p>
+      </div>
+      <div class="card">
+        <div class="icone">🎧</div>
+        <h3>SAC e Ouvidoria</h3>
+        <p>Gestão completa de reclamações, solicitações, cancelamentos, denúncias e manifestações, em conformidade com a legislação vigente.</p>
+      </div>
+      <div class="card">
+        <div class="icone">💬</div>
+        <h3>Atendimento Digital Multicanal</h3>
+        <p>Suporte via chat, WhatsApp, e-mail e redes sociais, integrando todos os canais em uma única plataforma de atendimento.</p>
+      </div>
+      <div class="card">
+        <div class="icone">🛠️</div>
+        <h3>Suporte Técnico (Help Desk)</h3>
+        <p>Assistência técnica de níveis 1 e 2 para produtos e serviços, com resolução rápida de problemas e acompanhamento contínuo.</p>
+      </div>
+      <div class="card">
+        <div class="icone">📊</div>
+        <h3>Backoffice e BPO</h3>
+        <p>Terceirização de processos administrativos, cadastros, conferências, faturamento e rotinas operacionais com segurança e precisão.</p>
+      </div>
+      <div class="card">
+        <div class="icone">🤖</div>
+        <h3>Automação e IA</h3>
+        <p>Chatbots inteligentes, respostas automáticas e análise de dados para elevar a qualidade do atendimento e reduzir custos operacionais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POLÍTICA DE PRIVACIDADE ===== -->
+<section id="privacidade">
+  <div class="container">
+    <h2 class="titulo">Política de Privacidade</h2>
+    <p class="subtitulo">Última atualização: outubro de 2026</p>
+    <div class="legal">
+      <h3>1. Introdução</h3>
+      <p>A <strong>Orbitall Atendimento Ltda</strong> (Nome Fantasia: <strong>Necxt</strong>, CNPJ: 18.081.219/0001-28), com sede na Rua Elpidio de Almeida, 1111, Bairro Catolé, Campina Grande – PB, CEP 58410-215, valoriza a privacidade de seus clientes, parceiros e usuários. Esta Política descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
+
+      <h3>2. Dados Coletados</h3>
+      <ul>
+        <li><strong>Dados de identificação:</strong> nome, CPF/CNPJ, documentos de identidade;</li>
+        <li><strong>Dados de contato:</strong> e-mail, telefone, endereço;</li>
+        <li><strong>Dados de atendimento:</strong> gravações de chamadas, histórico de conversas, protocolos e manifestações;</li>
+        <li><strong>Dados de navegação:</strong> endereço IP, dispositivo, cookies e páginas acessadas.</li>
+      </ul>
+
+      <h3>3. Finalidade do Tratamento</h3>
+      <p>Utilizamos seus dados exclusivamente para:</p>
+      <ul>
+        <li>Prestar serviços de atendimento ao cliente contratados;</li>
+        <li>Responder solicitações, reclamações e dúvidas;</li>
+        <li>Cumprir obrigações legais, contratuais e regulatórias;</li>
+        <li>Melhorar a qualidade dos nossos serviços e a experiência do usuário;</li>
+        <li>Prevenção à fraude e segurança das operações.</li>
+      </ul>
+
+      <h3>4. Compartilhamento de Dados</h3>
+      <p>O compartilhamento ocorre apenas quando necessário, com:</p>
+      <ul>
+        <li>Clientes e contratantes, no escopo dos serviços prestados;</li>
+        <li>Órgãos reguladores e autoridades públicas, mediante obrigação legal;</li>
+        <li>Prestadores de serviços contratados sob sigilo e conformidade com a LGPD.</li>
+      </ul>
+      <p>Não vendemos dados pessoais a terceiros.</p>
+
+      <h3>5. Segurança e Armazenamento</h3>
+      <p>Adotamos medidas técnicas e administrativas aptas à proteção dos dados pessoais, como criptografia, controle de acesso, gravação monitorada e políticas internas de segurança. Os dados são armazenados em ambiente seguro, pelo tempo necessário às finalidades descritas ou exigido por lei.</p>
+
+      <h3>6. Direitos do Titular</h3>
+      <p>Conforme a LGPD, você pode solicitar a qualquer momento: confirmação do tratamento, acesso, correção, anonimização, portabilidade, eliminação e revogação do consentimento.</p>
+      <p><strong>Encarregado de Dados (DPO):</strong> dpo@necxt.com.br — Endereço: Rua Elpidio de Almeida, 1111, Bairro Catolé, Campina Grande – PB, CEP 58410-215.</p>
+
+      <h3>7. Cookies</h3>
+      <p>Utilizamos cookies para melhorar a navegação, personalizar conteúdo e analisar tráfego. Você pode desativá-los nas configurações do navegador, mas algumas funcionalidades podem ser afetadas.</p>
+
+      <h3>8. Alterações desta Política</h3>
+      <p>Esta Política pode ser atualizada periodicamente. A versão vigente estará sempre disponível nesta página, com a data da última atualização.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TERMOS DE USO ===== -->
+<section id="termos">
+  <div class="container">
+    <h2 class="titulo">Termos de Uso</h2>
+    <p class="subtitulo">Última atualização: outubro de 2026</p>
+    <div class="legal">
+      <h3>1. Aceitação dos Termos</h3>
+      <p>Ao acessar e utilizar o site da <strong>Orbitall Atendimento Ltda</strong> (Nome Fantasia: <strong>Necxt</strong>, CNPJ: 18.081.219/0001-28), você declara ter lido, compreendido e aceitado integralmente estes Termos de Uso, bem como a Política de Privacidade.</p>
+
+      <h3>2. Do Serviço</h3>
+      <p>O site tem caráter institucional e informativo, apresentando os serviços de atendimento ao cliente, SAC, suporte técnico e BPO prestados pela empresa. As condições contratuais específicas são formalizadas em propostas e contratos próprios.</p>
+
+      <h3>3. Das Obrigações do Usuário</h3>
+      <ul>
+        <li>Fornecer informações verdadeiras, exatas e atualizadas ao utilizar nossos canais de contato;</li>
+        <li>Utilizar o site de forma lícita, respeitosa e sem práticas prejudiciais;</li>
+        <li>Não utilizar os canais de atendimento para fins ilícitos, ofensivos ou fraudulentos.</li>
+      </ul>
+
+      <h3>4. Gravações e Monitoramento</h3>
+      <p>As ligações e interações nos canais de atendimento poderão ser gravadas e monitoradas para fins de controle de qualidade, treinamento, segurança e cumprimento de obrigações legais, conforme informado no início de cada atendimento.</p>
+
+      <h3>5. Propriedade Intelectual</h3>
+      <p>Todo o conteúdo do site (textos, marcas Necxt e Orbitall, logotipos, imagens, layout) é de propriedade da Orbitall Atendimento Ltda ou licenciado a ela, sendo vedada sua reprodução sem autorização prévia e por escrito.</p>
+
+      <h3>6. Limitação de Responsabilidade</h3>
+      <p>A empresa não se responsabiliza por: (i) falhas técnicas, indisponibilidades ou vírus decorrentes do uso da internet; (ii) interrupções temporárias do site para manutenção; (iii) uso indevido das informações por terceiros fora de seu controle.</p>
+
+      <h3>7. Legislação Aplicável</h3>
+      <p>Estes Termos são regidos pelas leis da República Federativa do Brasil, com jurisdição do foro da Comarca de Campina Grande/PB para dirimir eventuais controvérsias.</p>
+
+      <h3>8. Contato</h3>
+      <p>Dúvidas sobre estes Termos podem ser encaminhadas por e-mail ou correspondência ao nosso endereço: Rua Elpidio de Almeida, 1111, Bairro Catolé, Campina Grande – PB, CEP 58410-215.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section id="contato">
+  <div class="container">
+    <h2 class="titulo">Fale Conosco</h2>
+    <p class="subtitulo">Estamos à disposição para tirar dúvidas, apresentar propostas ou atender solicitações.</p>
+    <div class="contato-grid">
+      <div class="contato-item">
+        <h3>📍 Endereço</h3>
+        <p>Rua Elpidio de Almeida, 1111<br>Bairro Catolé – Campina Grande/PB<br>CEP 58410-215</p>
+      </div>
+      <div class="contato-item">
+        <h3>📧 E-mail</h3>
+        <p>contato@necxt.com.br<br>dpo@necxt.com.br (Proteção de Dados)</p>
+      </div>
+      <div class="contato-item">
+        <h3>🕒 Horário</h3>
+        <p>Segunda a sexta-feira<br>8h às 18h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Necxt — Orbitall Atendimento Ltda</h4>
+      <p>Razão Social: Orbitall Atendimento Ltda</p>
+      <p>CNPJ (Matriz): 18.081.219/0001-28</p>
+      <p>Rua Elpidio de Almeida, 1111<br>Bairro Catolé – Campina Grande – PB<br>CEP 58410-215</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informações Legais</h4>
+      <ul>
+        <li><a href="#privacidade">Política de Privacidade</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 Orbitall Atendimento Ltda (Necxt) — Todos os direitos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
