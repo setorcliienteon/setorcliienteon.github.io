@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orbitall Atendimento Ltda — Atendimento ao Cliente de Excelência</title>
-<meta name="description" content="Orbitall Atendimento Ltda: soluções completas em atendimento ao cliente, central de relacionamento, suporte e backoffice.">
+<title>Necxt by Orbitall Atendimento — Contact Center & Customer Experience</title>
+<meta name="description" content="Orbitall Atendimento Ltda (Necxt): contact center, teleatendimento, BPO, tecnologia e soluções completas em experiência do cliente desde 2013.">
 <style>
   :root{
     --azul:#0b2a4a; --azul-claro:#1f6fb2; --laranja:#ff7a1a;
@@ -14,51 +14,50 @@
   body{font-family:"Segoe UI",Arial,Helvetica,sans-serif;color:var(--texto);line-height:1.6;background:var(--branco);}
   .container{max-width:1100px;margin:0 auto;padding:0 20px;}
 
-  /* HEADER */
   header{background:var(--azul);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15);}
   header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;flex-wrap:wrap;}
   .logo{color:#fff;font-size:1.5rem;font-weight:800;}
   .logo span{color:var(--laranja);}
+  .logo small{display:block;font-size:.68rem;font-weight:400;color:#9fb8cf;letter-spacing:2px;}
   nav a{color:#dce9f5;text-decoration:none;margin-left:22px;font-size:.95rem;transition:.2s;}
   nav a:hover{color:var(--laranja);}
 
-  /* HERO */
   .hero{background:linear-gradient(135deg,#0b2a4a 0%,#134e86 100%);color:#fff;padding:90px 0;text-align:center;}
   .hero h1{font-size:2.6rem;margin-bottom:16px;}
   .hero h1 span{color:var(--laranja);}
-  .hero p{font-size:1.15rem;max-width:680px;margin:0 auto 30px;color:#d7e6f4;}
-  .btn{display:inline-block;background:var(--laranja);color:#fff;padding:13px 34px;border-radius:30px;text-decoration:none;font-weight:700;transition:.2s;}
+  .hero p{font-size:1.15rem;max-width:700px;margin:0 auto 14px;color:#d7e6f4;}
+  .hero .tag{display:inline-block;background:rgba(255,122,26,.15);border:1px solid var(--laranja);color:var(--laranja);padding:6px 18px;border-radius:30px;font-size:.85rem;font-weight:700;letter-spacing:1px;margin-bottom:20px;}
+  .btn{display:inline-block;background:var(--laranja);color:#fff;padding:13px 34px;border-radius:30px;text-decoration:none;font-weight:700;transition:.2s;margin-top:16px;}
   .btn:hover{background:#e06600;transform:translateY(-2px);}
 
-  /* SEÇÕES */
   section{padding:70px 0;}
   section:nth-of-type(even){background:var(--cinza);}
   h2{font-size:2rem;color:var(--azul);margin-bottom:12px;text-align:center;}
   .sub{text-align:center;color:#5a6472;max-width:720px;margin:0 auto 45px;}
 
-  /* SOBRE */
-  .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .sobre-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;}
   .sobre-grid ul{list-style:none;margin-top:18px;}
   .sobre-grid li{padding:8px 0 8px 30px;position:relative;}
   .sobre-grid li::before{content:"✔";color:var(--laranja);position:absolute;left:0;font-weight:700;}
   .destaque{background:var(--azul);border-radius:16px;padding:36px;color:#fff;}
   .destaque h3{color:var(--laranja);margin-bottom:14px;font-size:1.35rem;}
+  .ficha{background:#fff;border-radius:16px;padding:30px;box-shadow:0 4px 18px rgba(11,42,74,.08);}
+  .ficha h3{color:var(--azul);margin-bottom:14px;}
+  .ficha p{margin-bottom:8px;font-size:.95rem;}
+  .ficha strong{color:var(--azul-claro);}
 
-  /* SERVIÇOS */
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;}
   .card{background:#fff;border-radius:14px;padding:30px;box-shadow:0 4px 18px rgba(11,42,74,.08);border-top:4px solid var(--laranja);transition:.25s;}
   .card:hover{transform:translateY(-6px);box-shadow:0 10px 26px rgba(11,42,74,.15);}
   .card h3{color:var(--azul);margin-bottom:10px;font-size:1.15rem;}
   .card .icone{font-size:2rem;margin-bottom:12px;}
 
-  /* POLÍTICA / TERMOS */
   .legal h3{color:var(--azul);margin:26px 0 10px;font-size:1.15rem;}
   .legal p, .legal li{color:#3d4550;font-size:.98rem;}
   .legal ol, .legal ul{margin-left:22px;margin-bottom:10px;}
   .legal li{margin-bottom:6px;}
   .nota{background:#fff8f0;border-left:4px solid var(--laranja);padding:16px 20px;border-radius:8px;margin-top:20px;font-size:.95rem;}
 
-  /* CONTATO */
   .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
   .contato-info h3{color:var(--azul);margin-bottom:14px;}
   .contato-info p{margin-bottom:10px;}
@@ -66,7 +65,6 @@
   form input:focus, form textarea:focus{outline:none;border-color:var(--azul-claro);box-shadow:0 0 0 3px rgba(31,111,178,.15);}
   form button{border:none;cursor:pointer;font-size:1rem;}
 
-  /* FOOTER */
   footer{background:var(--azul);color:#c8d8e8;padding:45px 0 25px;text-align:center;}
   footer .container{max-width:900px;}
   footer h4{color:#fff;font-size:1.25rem;margin-bottom:14px;}
@@ -89,7 +87,7 @@
 
 <header>
   <div class="container">
-    <div class="logo">Orbitall<span> Atendimento</span></div>
+    <div class="logo">Necxt<span>.</span><small>by Orbitall Atendimento</small></div>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -103,8 +101,9 @@
 <!-- HERO -->
 <div class="hero">
   <div class="container">
-    <h1>Atendimento ao cliente que <span>orbita</span> em torno da sua satisfação</h1>
-    <p>A Orbitall Atendimento Ltda oferece soluções completas em relacionamento com o cliente, com tecnologia, agilidade e foco total em resultados.</p>
+    <div class="tag">EXPERIÊNCIA DO CLIENTE · CONTACT CENTER · TECNOLOGIA</div>
+    <h1>Transformamos <span>atendimento</span> em experiência</h1>
+    <p>A Orbitall Atendimento Ltda, operando sob a marca <strong>Necxt</strong>, é uma empresa do segmento de teleatendimento, contact center e soluções de experiência do cliente, ativa desde 2013, com sede em Campina Grande – PB.</p>
     <a class="btn" href="#contato">Solicite uma proposta</a>
   </div>
 </div>
@@ -112,22 +111,35 @@
 <!-- SOBRE -->
 <section id="sobre">
   <div class="container">
-    <h2>Sobre a Orbitall</h2>
-    <p class="sub">Uma empresa comprometida em transformar o atendimento ao cliente em um diferencial competitivo para o seu negócio.</p>
+    <h2>Sobre a Necxt</h2>
+    <p class="sub">Uma empresa de contact center e tecnologia que coloca a experiência do cliente no centro de tudo.</p>
     <div class="sobre-grid">
       <div>
-        <p>A <strong>Orbitall Atendimento Ltda</strong> atua no segmento de atendimento e relacionamento com clientes, oferecendo serviços de alta qualidade para empresas que desejam elevar sua experiência de atendimento.</p>
+        <p>A <strong>Orbitall Atendimento Ltda</strong> (nome fantasia <strong>Necxt</strong>) atua no mercado de <strong>teleatendimento e contact center</strong>, oferecendo soluções completas de relacionamento com o cliente, combinando operação humana de alto desempenho com plataformas de tecnologia e inteligência de dados.</p>
+        <p style="margin-top:12px;">Fundada em <strong>22 de abril de 2013</strong>, com sede em Campina Grande – PB, a empresa também desenvolve atividades de tecnologia da informação, tratamento de dados e suporte técnico, entregando soluções de ponta a ponta para seus parceiros.</p>
         <ul>
-          <li>Equipe treinada e dedicada</li>
-          <li>Atendimento personalizado para cada cliente</li>
+          <li>Mais de uma década de atuação em teleatendimento</li>
+          <li>Operação baseada em tecnologia e dados</li>
+          <li>Atendimento multicanal e omnichannel</li>
           <li>Processos alinhados à LGPD</li>
-          <li>Tecnologia e monitoramento de qualidade</li>
-          <li>Compromisso com prazos e resultados</li>
+          <li>Equipe qualificada e monitoramento de qualidade</li>
         </ul>
       </div>
-      <div class="destaque">
-        <h3>Nossa Missão</h3>
-        <p>Proporcionar atendimento ao cliente com excelência, ética e eficiência, gerando valor para nossos parceiros e fortalecendo o relacionamento entre empresas e consumidores.</p>
+      <div>
+        <div class="destaque" style="margin-bottom:20px;">
+          <h3>Nossa Missão</h3>
+          <p>Elevamos a experiência do cliente por meio de atendimento de excelência, tecnologia e pessoas comprometidas, gerando valor real para as empresas que atendem os seus consumidores.</p>
+        </div>
+        <div class="ficha">
+          <h3>Dados Cadastrais</h3>
+          <p><strong>Razão Social:</strong> Orbitall Atendimento Ltda</p>
+          <p><strong>Nome Fantasia:</strong> Necxt</p>
+          <p><strong>CNPJ:</strong> 18.081.219/0001-28</p>
+          <p><strong>Fundação:</strong> 22/04/2013</p>
+          <p><strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada</p>
+          <p><strong>Atividade Principal (CNAE):</strong> 8220-2/00 — Atividades de Teleatendimento</p>
+          <p><strong>Situação Cadastral:</strong> Ativa</p>
+        </div>
       </div>
     </div>
   </div>
@@ -137,37 +149,47 @@
 <section id="servicos">
   <div class="container">
     <h2>Nossos Serviços</h2>
-    <p class="sub">Soluções flexíveis, adaptadas às necessidades de cada parceiro.</p>
+    <p class="sub">Operação de contact center e soluções digitais baseadas nas atividades registradas da empresa.</p>
     <div class="cards">
       <div class="card">
         <div class="icone">📞</div>
-        <h3>Central de Atendimento</h3>
-        <p>Atendimento receptivo e ativo via telefone, com foco em agilidade, cortesia e resolução eficiente das demandas.</p>
+        <h3>Contact Center / Teleatendimento</h3>
+        <p>Operação de atendimento receptivo e ativo via voz, com foco em resolução, cortesia e qualidade — nossa atividade principal (CNAE 8220-2/00).</p>
       </div>
       <div class="card">
         <div class="icone">💬</div>
-        <h3>Atendimento Digital</h3>
-        <p>Suporte por WhatsApp, e-mail e chat, integrando os canais digitais para uma experiência omnichannel completa.</p>
+        <h3>Atendimento Multicanal</h3>
+        <p>Integração de canais digitais como WhatsApp, chat, e-mail e redes sociais em uma experiência omnichannel unificada.</p>
       </div>
       <div class="card">
-        <div class="icone">🛠️</div>
-        <h3>Suporte ao Cliente</h3>
-        <p>Auxílio técnico e esclarecimento de dúvidas, garantindo que o cliente tenha suas necessidades atendidas com rapidez.</p>
+        <div class="icone">💻</div>
+        <h3>Desenvolvimento de Software</h3>
+        <p>Desenvolvimento e licenciamento de programas de computador customizados e não customizados, sob medida para a operação de atendimento.</p>
       </div>
       <div class="card">
-        <div class="icone">📋</div>
-        <h3>Backoffice Administrativo</h3>
-        <p>Apoio operacional e administrativo: registro, acompanhamento e tratamento de solicitações e processos internos.</p>
-      </div>
-      <div class="card">
-        <div class="icone">🤝</div>
-        <h3>Retenção e Relacionamento</h3>
-        <p>Ações proativas de fidelização, recuperação de clientes e construção de relacionamento de longo prazo.</p>
+        <div class="icone">🤖</div>
+        <h3>Automação & IA no Atendimento</h3>
+        <p>Chatbots, automação de fluxos e uso de inteligência artificial para ganho de eficiência e melhoria contínua da experiência do cliente.</p>
       </div>
       <div class="card">
         <div class="icone">📊</div>
-        <h3>Monitoramento e Qualidade</h3>
-        <p>Acompanhamento de indicadores e auditoria de atendimentos para garantir padrões elevados de qualidade.</p>
+        <h3>Tratamento de Dados & Analytics</h3>
+        <p>Processamento de dados, relatórios de desempenho e inteligência analítica para embasar decisões e elevar indicadores de qualidade.</p>
+      </div>
+      <div class="card">
+        <div class="icone">🛠️</div>
+        <h3>Suporte & Consultoria em TI</h3>
+        <p>Suporte técnico, consultoria em tecnologia da informação, hospedagem e serviços de aplicação para sustentar a operação.</p>
+      </div>
+      <div class="card">
+        <div class="icone">📋</div>
+        <h3>Backoffice & BPO</h3>
+        <p>Serviços combinados de escritório, apoio administrativo e intermediação de serviços e negócios em geral.</p>
+      </div>
+      <div class="card">
+        <div class="icone">📈</div>
+        <h3>Monitoramento de Qualidade</h3>
+        <p>Auditoria de atendimentos, gestão de indicadores (SLA, NPS, CSAT) e programas de melhoria contínua da operação.</p>
       </div>
     </div>
   </div>
@@ -178,33 +200,34 @@
   <div class="container">
     <h2>Política de Privacidade</h2>
     <p class="sub">Última atualização: outubro de 2026</p>
-    <p>A Orbitall Atendimento Ltda ("Orbitall", "nós") respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).</p>
+    <p>A Orbitall Atendimento Ltda ("Necxt", "nós") respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).</p>
 
     <h3>1. Dados que coletamos</h3>
     <ul>
-      <li><strong>Dados de identificação:</strong> nome, CPF/CNPJ, telefone, e-mail e endereço, fornecidos voluntariamente.</li>
-      <li><strong>Dados de atendimento:</strong> registros de interações, chamadas e histórico de solicitações.</li>
-      <li><strong>Dados de navegação:</strong> endereço IP, navegador e páginas acessadas (quando aplicável).</li>
+      <li><strong>Dados de identificação:</strong> nome, CPF/CNPJ, telefone, e-mail e endereço, fornecidos voluntariamente;</li>
+      <li><strong>Dados de atendimento:</strong> registros de interações, chamadas, gravações (quando autorizadas e informadas) e histórico de solicitações;</li>
+      <li><strong>Dados de navegação:</strong> endereço IP, navegador e páginas acessadas neste site (quando aplicável).</li>
     </ul>
 
     <h3>2. Finalidade do uso</h3>
     <ul>
-      <li>Prestar os serviços contratados e responder às suas solicitações;</li>
-      <li>Melhorar nossos processos de atendimento e a experiência do cliente;</li>
+      <li>Prestar os serviços de teleatendimento, contact center e tecnologia contratados;</li>
+      <li>Responder às suas solicitações e melhorar a experiência de atendimento;</li>
+      <li>Realizar tratamento de dados e análises operacionais, conforme os CNAEs da empresa;</li>
       <li>Cumprir obrigações legais, regulatórias e contratuais.</li>
     </ul>
 
     <h3>3. Compartilhamento</h3>
-    <p>Os dados são compartilhados apenas quando necessário à prestação dos serviços, com empresas contratadas sob confidencialidade, ou mediante ordem judicial ou determinação legal.</p>
+    <p>Os dados são compartilhados apenas quando necessário à prestação dos serviços, com empresas contratadas sob confidencialidade e obrigações de proteção de dados, ou mediante ordem judicial ou determinação legal.</p>
 
     <h3>4. Armazenamento e segurança</h3>
-    <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda ou alteração. Os dados são mantidos pelo tempo necessário às finalidades descritas nesta política.</p>
+    <p>Adotamos medidas técnicas e administrativas aptas a proteger seus dados contra acessos não autorizados, perda, alteração ou vazamento. Os dados são mantidos pelo tempo necessário às finalidades descritas nesta política.</p>
 
     <h3>5. Seus direitos</h3>
-    <p>Nos termos da LGPD, você pode solicitar, a qualquer momento: confirmação do tratamento, acesso, correção, anonimização, portabilidade, eliminação e informação sobre o compartilhamento dos seus dados.</p>
+    <p>Nos termos da LGPD, você pode solicitar, a qualquer momento: confirmação da existência de tratamento, acesso, correção, anonimização, portabilidade, eliminação e informação sobre o compartilhamento dos seus dados pessoais.</p>
 
     <h3>6. Contato do Encarregado de Dados (DPO)</h3>
-    <p>Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato pelo canal disponível na seção "Contato" deste site, ou pelo endereço da empresa informado no rodapé.</p>
+    <p>Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato pelos canais informados na seção "Contato" deste site, ou pelo endereço da empresa no rodapé.</p>
 
     <div class="nota">Esta política pode ser atualizada periodicamente. Recomendamos a revisão desta página sempre que utilizar nossos serviços.</div>
   </div>
@@ -218,7 +241,7 @@
     <p>Ao acessar este site e utilizar os serviços da Orbitall Atendimento Ltda, você concorda com os termos abaixo.</p>
 
     <h3>1. Do objeto</h3>
-    <p>Estes Termos regulam o acesso e a utilização do site da Orbitall e a contratação de seus serviços de atendimento e relacionamento com clientes.</p>
+    <p>Estes Termos regulam o acesso e a utilização do site da Necxt e a contratação de seus serviços de teleatendimento, contact center, tecnologia da informação e tratamento de dados.</p>
 
     <h3>2. Da utilização do site</h3>
     <ul>
@@ -228,7 +251,7 @@
     </ul>
 
     <h3>3. Dos serviços</h3>
-    <p>Os serviços são prestados conforme os escopos, prazos e condições definidos em contrato ou proposta específica. Nenhuma informação do site substitui o contrato formal firmado entre as partes.</p>
+    <p>Os serviços são prestados conforme os escopos, prazos e condições definidos em contrato ou proposta específica. Nenhuma informação deste site substitui o contrato formal firmado entre as partes.</p>
 
     <h3>4. Da propriedade intelectual</h3>
     <p>Marca, logotipo e conteúdo do site pertencem à Orbitall Atendimento Ltda, sendo protegidos pela legislação vigente.</p>
@@ -248,13 +271,13 @@
 <section id="contato">
   <div class="container">
     <h2>Fale Conosco</h2>
-    <p class="sub">Entre em contato e descubra como podemos ajudar o seu negócio.</p>
+    <p class="sub">Entre em contato e descubra como podemos elevar a experiência do seu cliente.</p>
     <div class="contato-grid">
       <div class="contato-info">
-        <h3>Orbitall Atendimento Ltda</h3>
+        <h3>Necxt — Orbitall Atendimento Ltda</h3>
         <p><strong>Endereço:</strong><br>Rua Elpídio de Almeida, 1111 – Bairro Catolé<br>Campina Grande – PB – CEP 58410-215</p>
         <p><strong>CNPJ:</strong> 18.081.219/0001-28</p>
-        <p><strong>Horário de atendimento:</strong> Segunda a sexta, das 8h às 18h</p>
+        <p><strong>Atuação:</strong> Teleatendimento, Contact Center, TI e Tratamento de Dados</p>
         <p>Utilize o formulário ao lado ou visite-nos em nosso endereço. Responderemos o mais breve possível.</p>
       </div>
       <form>
@@ -271,9 +294,10 @@
 <!-- RODAPÉ -->
 <footer>
   <div class="container">
-    <h4>Orbitall Atendimento Ltda</h4>
+    <h4>Necxt · Orbitall Atendimento Ltda</h4>
     <p><strong>CNPJ:</strong> 18.081.219/0001-28</p>
     <p><strong>Endereço:</strong> Rua Elpídio de Almeida, 1111 – Bairro Catolé – Campina Grande – PB – CEP 58410-215</p>
+    <p><strong>Atividade Principal:</strong> 8220-2/00 — Atividades de Teleatendimento</p>
     <hr>
     <p class="legal-links">
       <a href="#privacidade">Política de Privacidade</a> ·
